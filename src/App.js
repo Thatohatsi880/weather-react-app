@@ -9,7 +9,7 @@ function App() {
         <h1>
           Finally coding a Weather App using React
         </h1>
-        <Weather/>
+        <Weather city="Springs"/>
       </header>
     </div>
   );
