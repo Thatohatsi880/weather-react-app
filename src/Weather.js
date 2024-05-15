@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import { Audio } from 'react-loader-spinner'
 
 export default function Weather(props){
 
@@ -11,5 +11,15 @@ export default function Weather(props){
     let apiUrl = `https://api.openweathermap.org/data/2.5/Weather?q=${props.city}&appid=${apiKey}&units=metric`;
     
     axios.get(apiUrl).then(handleResponse);
-    return<h3> After a very long time coming!!</h3>;
+    return(
+        <Audio
+        height="80"
+        width="80"
+       radius="9"
+       color="green"
+       ariaLabel="loading"
+        wrapperStyle
+      wrapperClass
+    />
+    );
 }
